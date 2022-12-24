@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #303030;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.fluid-navigation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    background: #eee;
+    border-radius: 15px;
+}
+
+.fn_inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fn_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 40px;
+    cursor: pointer;
+}
+
+.fn_item.active .fn_item-icon {
+    transform: translateY(-40px);
+}
+
+.fn_item.active .fn_item-text {
+    transform: translateY(8px);
+    opacity: 1;
+}
+
+.fn_item:hover .fn_item-icon {
+    transform: translateY(-10px);
+}
+
+.fn_item.active:hover .fn_item-icon {
+    transform: translateY(-40px);
+}
+
+.fn_item-icon {
+    position: relative;
+    z-index: 100;
+    font-size: 25px;
+    transition: 0.5s transform;
+    will-change: transform;
+}
+
+.fn_item-text {
+    position: absolute;
+    user-select: none;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.5s transform, 0.5s opacity;
+    will-change: opacity, transform;
+}
+
+.fn_ball {
+    position: absolute;
+    top: -33px;
+    left: calc(25% - 86px);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #35df01;
+    border: 5px solid #303030;
+    transition: 0.5s left;
+    will-change: left;
+}
+
+.fn_ball::before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: -23px;
+    width: 24px;
+    height: 19px;
+    background: url('./svg/curve-left.svg') no-repeat center center/cover;
+}
+
+.fn_ball::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    right: -23px;
+    width: 24px;
+    height: 19px;
+    background: url('./svg/curve-right.svg') no-repeat center center/cover;
+}

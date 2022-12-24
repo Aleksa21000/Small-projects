@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #1b21c4;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.drink-water {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.drink-water_content {
+    margin-bottom: 20px;
+}
+
+.drink-water_title {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.drink-water_big-bowl {
+    width: 130px;
+    height: 250px;
+    border: 3px solid #010468;
+    border-radius: 0 0 35px 35px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drink-water_big-bowl-remain {
+    background: #f4f4f4;
+    color: #010468;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.3s height;
+    will-change: height;
+}
+
+.drink-water_big-bowl-liters {
+    font-size: 26px;
+}
+
+.drink-water_big-bowl-precent {
+    color: #010468;
+    background: #2a78ec;
+    font-size: 26px;
+    height: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.3s height;
+    will-change: height;
+}
+
+.drink-water_big-bowl-reset {
+    border: none;
+    margin-top: 10px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.drink-water_glasses {
+    margin: 20px 0 10px;
+}
+
+.drink-water_small-bowls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+.drink-water_small-bowl {
+    width: 50px;
+    height: 100px;
+    border: 2px solid #010468;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.15s background-color;
+    will-change: background-color;
+}
+
+.drink-water_small-bowl.active {
+    background: #2a78ec;
+}
